@@ -1,0 +1,33 @@
+<%# variable
+  type: 
+    - ico: affiche seulement les icônes
+    - default: affiche tout le contenu
+%>
+<%# bug aria label si on utilise des espaces %>
+<nav class="navSocialLink">
+  <a href="#" class="heading4" aria-label=<%= type === 'ico' ? "lien_codepen": "" %>>
+    <span class="icon">
+      <%- include('../../../public/svg/logo codepen.svg') %>
+    </span>
+    <%= type !== 'ico' ? "codepen": "" %>
+  </a>
+  <a href="#" class="heading4" aria-label=<%= type === 'ico' ? "lien_github": "" %>>
+    <span class="icon">
+      <%- include('../../../public/svg/logo github.svg') %>
+    </span>
+    <%= type !== 'ico' ? "github" : "" %>
+  </a>
+  <a href="#" class="heading4" aria-label=<%= type === 'ico' ? "lien_gitlab": "" %>>
+    <span class="icon">
+      <%- include('../../../public/svg/logo gitlab uncolor.svg') %>
+    </span>
+    <%= type !== 'ico' ? "gitlab": "" %>
+  </a>
+  <a href="#" class="heading4" aria-label=<%= type === 'ico' ? "lien_linkedin": "" %>>
+    <span class="icon">
+      <%- include('../../../public/svg/logo linkedin.svg') %>
+    </span>
+    <%= type !== 'ico' ? "linkedin": "" %>
+  </a>
+</nav>
+

@@ -1,0 +1,29 @@
+{
+  "project": [
+    {
+      "title": "Timeline App",
+      "image":"projet-timeline.jpg",
+      "color": "#599EE2",
+      "description": "Projet réalisé lors de ma formation de concepteur développeur d’application.   L’application présente des timeline selon les époques avec chacun leur articles et l’appli posséde aussi des quizz sur différentes époques. En plus de sa elle posséde une partie admin pour la gestion de l’application.",
+      "tags": [
+        "Figma",
+        "SCSS",
+        "React",
+        "Express",
+        "MySQL"
+      ]
+    },
+    {
+      "title": "Portfolio",
+      "image":"projet-portfolio.jpg",
+      "color": "#4A8F81",
+      "description": "Site réaliser pour présenter mes projet et compétences dans le développement web",
+      "tags": [
+        "Figma",
+        "SCSS",
+        "EJS",
+        "Express"
+      ]
+    }
+  ]
+}

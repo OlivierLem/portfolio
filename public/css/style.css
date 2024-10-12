@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg-primary: #212528;
+  --bg-secondary: #313941;
+  --text-primary: #CED7E6;
+  --text-secondary: #4A8F81;
+  --text-contrast: #fff;
+  --font-text: "inter", sans-serif;
+  --color: var(--text-secondary);
+  --radius: 2.5rem;
+}
+
+body {
+  font: 400 1.6rem var(--font-text);
+  line-height: 2.2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.bigTitle {
+  font: 700 6rem var(--font-text);
+  line-height: 7rem;
+}
+.title {
+  font: 600 3.4rem var(--font-text);
+  line-height: 4.8rem;
+}
+.heading1 {
+  font: 500 3rem var(--font-text);
+  line-height: 4rem;
+}
+.heading2 {
+  font: 500 2.4rem var(--font-text);
+  line-height: 3.2rem;
+}
+.heading3 {
+  font: 500 2rem var(--font-text);
+  line-height: 2.6rem;
+}
+.heading4 {
+  font: inherit;
+  line-height: inherit;
+}
+.text {
+  font: 400 1.2rem var(--font-text);
+  line-height: 1.6rem;
+}
+
+.icon > svg {
+  color: var(--text-secondary);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  line-height: 1.2rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-contrast);
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.heroSection {
+  color: var(--text-contrast);
+  width: 100vw;
+  height: 100vh;
+}
+
+.heroSection-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8.6rem;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.heroSection-content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+  max-width: 50rem;
+}
+
+.heroSection-content > div > p {
+  color: var(--text-primary);
+}
+
+.heroSection h1 >span {
+  color: var(--text-secondary);
+}
+
+/* navBar */
+
+.navBar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  gap: 4rem;
+  width: fit-content;
+  top: 3rem;
+  right: 5rem;
+  padding: 1rem 1.5rem;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--text-contrast);
+  transition: color ease-in-out .25s;
+}
+
+.navBar a:hover {
+  color: var(--text-secondary);
+}
+
+/* navSocial */
+
+.navSocialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navSocialLink a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text-contrast);
+  transition: color ease-in-out .25s;
+}
+
+.navSocialLink a:hover {
+  color: var(--text-secondary);
+}
+
+.navSocialLink .icon {
+  width: fit-content;
+  height: fit-content;
+}
+
+.navSocialLink .icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* projectSection */
+
+.projectSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.projectSection > div:not(.blockInfos) {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 43rem;
+  height: 26rem;
+  border-radius: 2.5rem;
+}
+
+.projectSection .blockTitle {
+  padding: 5rem 6rem 5rem 12rem;
+  color: var(--text-contrast);
+  background-color: var(--text-secondary);
+}
+
+.projectSection .blockLinks {
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: solid 3px #6C798F;
+}
+
+.blockLinks > .listSocialLinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: fit-content;
+  height: fit-content;
+  padding: .5rem 1rem;
+  border-radius: var(--radius);
+  background-color: var(--bg-primary);
+}
+
+.blockLinks > .listSocialLinks > .icon {
+  width: 3rem;
+  height: 3rem;
+  line-height: 0;
+  padding: 0;
+}
+
+.blockLinks > .listSocialLinks > .icon > svg{
+  width: 3rem;
+  height: 100%;
+}
+
+/* blockInfos */
+
+.blockInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+}
+
+.blockInfos:not(.blockInfos-project) {
+  border: solid .3rem var(--text-primary);
+}
+.blockInfos.blockInfos-project {
+  flex-direction: row;
+  width: 68rem;
+  height: 26rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.blockInfos.blockInfos-project:nth-of-type(3) {
+  flex-direction: row-reverse;
+  padding-left: 2.5rem;
+}
+
+.blockInfos > img {
+  --color: attr(data-color);
+  width: 32rem;
+  height: 100%;
+  border-radius: 1.9rem;
+  object-fit: cover;
+  box-shadow: .35rem .35rem 0 0 var(--color);
+}
+
+.blockInfos.blockInfos-project > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blockInfos.blockInfos-project > div > .temp {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.blockInfos .heading1 {
+  color: var(--text-secondary);
+}
+
+.tagsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .4rem .8rem;
+}
+
+.tagsList > p {
+  width: fit-content;
+  height: fit-content;
+  padding: .2rem .8rem;
+  border-radius: var(--radius);
+  background-color: var(--bg-primary);
+}
