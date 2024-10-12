@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <section class="heroSection">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <%- include('../partials/navBar.ejs') %>
-    <div class="heroSection-content">
-      <div>
-        <h1 class="title">Je suis <span>Olivier Lemort</span>, Développeur d'application web</h1>
-        <p class="heading4">Lorem ipsum odor amet, consectetuer adipiscing elit. Fames dui vestibulum risus amet per curabitur</p>
-        <%- include('../partials/navBar-socialLink.ejs', {type: 'ico'}) %>
+    <section class="heroSection">
+      <div class="heroSection-content">
+        <div>
+          <h1 class="title">
+            Je suis <span>Olivier Lemort</span>, Développeur d'application web
+          </h1>
+          <p class="heading4">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Fames dui
+            vestibulum risus amet per curabitur
+          </p>
+          <%- include('../partials/navBar-socialLink.ejs', {type: 'ico'}) %>
+        </div>
+        <button class="button heading4">
+          Mes projets
+          <span class="icon">
+            <%- include('../../../public/svg/icon external link.svg') %>
+          </span>
+        </button>
       </div>
-      <button class="button heading4">Mes projets <span class="icon"><%#- include('../../../public/svg/icon external link.svg') %></span></button>
-    </div>
-  </section>
+    </section>
 
-  <section class="projectSection">
-    <div class="blockTitle">
-      <h3 class="bigTitle">Mes projets</h3>
-    </div>
-    <% for (const project of list_project) { %>
-      <%- include('../layouts/blockInfos.ejs', {project: project}) %>
-    <%} %>
-    <div class="blockLinks">
-      <p class="title">Pour en voir plus :</p>
-      <div class="listSocialLinks">
-        <span class="icon">
-          <%- include('../../../public/svg/logo codepen.svg')%>
-        </span>
-        <span class="icon">
-          <%- include('../../../public/svg/logo github.svg')%>
-        </span>
-        <span class="icon">
-          <%- include('../../../public/svg/logo gitlab uncolor.svg')%>
-        </span>
+    <section class="projectSection" id="projectSection">
+      <div class="blockTitle">
+        <h3 class="bigTitle">Mes projets</h3>
       </div>
-    </div>
-  </section>
-</body>
+      <% for (const project of listProject) { %> <%-
+      include('../layouts/blockInfos-project.ejs', {project: project}) %> <% }
+      %>
+      <div class="blockLinks">
+        <p class="title">Pour en voir plus :</p>
+        <div class="listSocialLinks">
+          <span class="icon">
+            <%- include('../../../public/svg/logo codepen.svg')%>
+          </span>
+          <span class="icon">
+            <%- include('../../../public/svg/logo github.svg')%>
+          </span>
+          <span class="icon">
+            <%- include('../../../public/svg/logo gitlab uncolor.svg')%>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="experienceSection" id="experienceSection">
+      <h3 class="bigTitle">Expérience pro</h3>
+      <%# for (const project of listProject) { %> <%-
+      include('../layouts/blockInfos.ejs', {project: listExperience[0]}) %> <%#
+      } %>
+    </section>
+  </body>
 </html>

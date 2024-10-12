@@ -10,17 +10,21 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  /*! ne fontionne pas */
 }
 
 :root {
   --bg-primary: #212528;
   --bg-secondary: #313941;
+  --border-gray: #6C798F;
   --text-primary: #CED7E6;
   --text-secondary: #4A8F81;
   --text-contrast: #fff;
   --font-text: "inter", sans-serif;
   --color: var(--text-secondary);
   --radius: 2.5rem;
+
 }
 
 body {
@@ -34,32 +38,38 @@ body {
   font: 700 6rem var(--font-text);
   line-height: 7rem;
 }
+
 .title {
   font: 600 3.4rem var(--font-text);
   line-height: 4.8rem;
 }
+
 .heading1 {
   font: 500 3rem var(--font-text);
   line-height: 4rem;
 }
+
 .heading2 {
   font: 500 2.4rem var(--font-text);
   line-height: 3.2rem;
 }
+
 .heading3 {
   font: 500 2rem var(--font-text);
   line-height: 2.6rem;
 }
+
 .heading4 {
   font: inherit;
   line-height: inherit;
 }
+
 .text {
   font: 400 1.2rem var(--font-text);
   line-height: 1.6rem;
 }
 
-.icon > svg {
+.icon>svg {
   color: var(--text-secondary);
 }
 
@@ -99,7 +109,7 @@ section {
   border: none;
 }
 
-.heroSection-content > div {
+.heroSection-content>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,11 +119,11 @@ section {
   max-width: 50rem;
 }
 
-.heroSection-content > div > p {
+.heroSection-content>div>p {
   color: var(--text-primary);
 }
 
-.heroSection h1 >span {
+.heroSection h1>span {
   color: var(--text-secondary);
 }
 
@@ -187,8 +197,8 @@ section {
   height: 100vh;
 }
 
-.projectSection > div:not(.blockInfos) {
-  display: flex; 
+.projectSection>div:not(.blockInfos) {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 43rem;
@@ -207,38 +217,75 @@ section {
   gap: 3rem;
   color: var(--text-primary);
   background-color: var(--bg-secondary);
-  border: solid 3px #6C798F;
+  border: solid 3px var(--border-gray);
 }
 
-.blockLinks > .listSocialLinks{
+.listSocialLinks {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
   width: fit-content;
   height: fit-content;
-  padding: .5rem 1rem;
   border-radius: var(--radius);
   background-color: var(--bg-primary);
 }
 
-.blockLinks > .listSocialLinks > .icon {
+.blockLinks>.listSocialLinks {
+  gap: 3rem;
+  padding: .5rem 1rem;
+}
+
+.listSocialLinks>.icon {
   width: 3rem;
   height: 3rem;
   line-height: 0;
   padding: 0;
 }
 
-.blockLinks > .listSocialLinks > .icon > svg{
+.blockLinks>.listSocialLinks>.icon>svg {
   width: 3rem;
   height: 100%;
+}
+
+.groupLinks {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.groupLinks>.listSocialLinks {
+  gap: 1rem;
+  padding: .4rem;
+}
+
+
+.groupLinks>.listSocialLinks>.icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.groupLinks>.listSocialLinks>.icon>svg {
+  width: 1.8rem;
+  height: 100%;
+}
+
+.groupLinks>a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  color: var(--text-contrast);
+  text-decoration: none;
+}
+
+.groupLinks>a>.icon>svg {
+  color: white;
 }
 
 /* blockInfos */
 
 .blockInfos {
   display: flex;
-  flex-direction: column;
   gap: 2rem;
   color: var(--text-primary);
   background-color: var(--bg-secondary);
@@ -246,8 +293,13 @@ section {
 }
 
 .blockInfos:not(.blockInfos-project) {
-  border: solid .3rem var(--text-primary);
+  flex-direction: column;
+  width: 37.5rem;
+  height: 50.8rem;
+  padding: 1rem;
+  border: solid .3rem var(--border-gray);
 }
+
 .blockInfos.blockInfos-project {
   flex-direction: row;
   width: 68rem;
@@ -260,7 +312,7 @@ section {
   padding-left: 2.5rem;
 }
 
-.blockInfos > img {
+.blockInfos>img {
   --color: attr(data-color);
   width: 32rem;
   height: 100%;
@@ -269,30 +321,68 @@ section {
   box-shadow: .35rem .35rem 0 0 var(--color);
 }
 
-.blockInfos.blockInfos-project > div {
+.blockInfos:not(.blockInfos-project)>img {
+  width: 100%;
+  height: 21rem;
+}
+
+.blockInfos-project>img {
+  width: 32rem;
+  height: 100%;
+}
+
+.blockInfos>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+.blockInfos.blockInfos-project>div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.blockInfos.blockInfos-project > div > .temp {
+.blockInfos.blockInfos-project>div>.temp-top {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
 
-.blockInfos .heading1 {
+.blockInfos.blockInfos-project>div>.temp-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blockInfos h5 {
   color: var(--text-secondary);
+}
+
+.blockInfos>div>.heading4 {
+  font-weight: 500;
+}
+
+.blockInfos>.button {
+  align-self: flex-end;
+  width: fit-content;
+  color: var(--bg-primary);
+  font: 500 1.4rem var(--font-text);
+  padding: .7rem 1rem;
+  margin-right: 2rem;
+  background-color: var(--text-secondary);
 }
 
 .tagsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: .4rem .8rem;
+  gap: 1rem .8rem;
 }
 
-.tagsList > p {
+.tagsList>p {
   width: fit-content;
   height: fit-content;
   padding: .2rem .8rem;

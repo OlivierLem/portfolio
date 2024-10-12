@@ -1,23 +1,23 @@
-<%# 
-  variable-content: title, img, date, description, tags[], isCertificate, links[]
-  variable-style: direction, className
-  ! modifier variable projet en data et ajouter une variable pour le style
-%>
+<%# variable-content: title, img, date, description, tags[], isCertificate !
+modifier variable projet en data et ajouter une variable pour le style %>
 
-<div class="blockInfos blockInfos-project">
+<div class="blockInfos">
   <% if(project) { %>
-    <img src="images/<%- project.image %>" alt="" style="--color:<%=project.color %>;">
-    <div>
-      <div class="temp">
-        <h5 class="heading1"><%- project.title %></h5>
-        <p class="heading4"><%- project.date %></p>
-        <p class="text"><%- project.description %></p>
-      </div>
-      <div class="tagsList">
-        <% for (const tags of project.tags) { %>
-          <p class="text"><%= tags %></p>
-        <% } %>
-      </div>
+  <img
+    src="images/<%- project.image %>"
+    alt=""
+    style="--color: <%=project.color %>"
+  />
+  <div>
+    <h5 class="heading3"><%- project.title %></h5>
+    <p class="heading4"><%- project.date %></p>
+    <p class="text"><%- project.description %></p>
+    <div class="tagsList">
+      <% for (const tags of project.tags) { %>
+      <p class="text"><%= tags %></p>
+      <% } %>
     </div>
+  </div>
+  <button class="button">Plus d'infos</button>
   <% } %>
 </div>

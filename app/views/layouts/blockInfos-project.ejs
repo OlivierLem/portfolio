@@ -1,0 +1,41 @@
+<%# 
+  variable-content: title, img, description, tags[], links[]
+%>
+
+<div class="blockInfos blockInfos-project">
+  <% if(project) { %>
+    <img src="images/<%- project.image %>" alt="" style="--color:<%=project.color %>;">
+    <div>
+      <div class="temp-top">
+        <h5 class="heading1"><%- project.title %></h5>
+        <p class="text"><%- project.description %></p>
+      </div>
+      <div class="temp-bottom">
+        <div class="tagsList">
+          <% for (const tags of project.tags) { %>
+            <p class="text"><%= tags %></p>
+          <% } %>
+        </div>
+        <div class="groupLinks">
+          <div class="listSocialLinks">
+            <span class="icon">
+              <%- include('../../../public/svg/logo codepen.svg')%>
+            </span>
+            <span class="icon">
+              <%- include('../../../public/svg/logo github.svg')%>
+            </span>
+            <span class="icon">
+              <%- include('../../../public/svg/logo gitlab uncolor.svg')%>
+            </span>
+          </div>
+          <a href="#">
+            En savoir plus 
+            <span class="icon">
+              <%- include('../../../public/svg/arrow-right.svg') %>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>

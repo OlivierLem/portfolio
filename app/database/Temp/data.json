@@ -25,5 +25,24 @@
         "Express"
       ]
     }
+  ],
+  "experience": [
+    {
+      "title": "Stage - développement d’application web (Angular)",
+      "image": "experience-firepark.jpg",
+      "color": "#3F51B6",
+      "date": "23 Juillet - 20 Août 2023",
+      "description": "Stage effectuer dans l’entreprise fyrepark en distanciel réaliser lors de ma formation concepteur développeur d’application",
+      "tags": [
+        "Angular",
+        "Firebase",
+        "Angular Material",
+        "CSS",
+        "Typescript",
+        "UI Design",
+        "GitHub",
+        "Trello"
+      ]
+    }
   ]
 }
