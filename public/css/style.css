@@ -286,6 +286,7 @@ section {
 
 .blockInfos {
   display: flex;
+  position: relative;
   gap: 2rem;
   color: var(--text-primary);
   background-color: var(--bg-secondary);
@@ -295,9 +296,18 @@ section {
 .blockInfos:not(.blockInfos-project) {
   flex-direction: column;
   width: 37.5rem;
+  border: solid .3rem var(--border-gray);
+}
+
+.blockInfos:not(img) {
+  padding: 2.5rem 1.2rem;
+  padding-right: 3rem;
+  height: 26rem;
+}
+
+.blockInfos:has(img) {
   height: 50.8rem;
   padding: 1rem;
-  border: solid .3rem var(--border-gray);
 }
 
 .blockInfos.blockInfos-project {
@@ -312,7 +322,7 @@ section {
   padding-left: 2.5rem;
 }
 
-.blockInfos>img {
+.blockInfos > img {
   --color: attr(data-color);
   width: 32rem;
   height: 100%;
@@ -326,12 +336,12 @@ section {
   height: 21rem;
 }
 
-.blockInfos-project>img {
+.blockInfos-project > img {
   width: 32rem;
   height: 100%;
 }
 
-.blockInfos>div {
+.blockInfos > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -382,10 +392,91 @@ section {
   gap: 1rem .8rem;
 }
 
-.tagsList>p {
+.tagsList > p {
   width: fit-content;
   height: fit-content;
   padding: .2rem .8rem;
   border-radius: var(--radius);
   background-color: var(--bg-primary);
+}
+
+/* experience section*/
+
+.experienceSection,
+.formationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: initial;
+  height: 100vh;
+}
+
+.experienceSection .sliderExperience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+:where(.experienceSection, .formationSection) > h3.bigTitle {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* formationSection */
+
+.formationSection {
+  justify-content: center;
+}
+
+.contentFormation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 6rem;
+  gap: 2.4rem;
+}
+
+.contentFormation > .blockInfos:first-of-type {
+  transform: translateY(-6rem);
+}
+
+.contentFormation > .blockInfos:nth-of-type(2)::before,
+.contentFormation > .blockInfos:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20%;
+  right: calc(100% - (9.3rem / 3));
+  width: 9.3rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--text-secondary);
+  z-index: -1;
+}
+
+.contentFormation > .blockInfos:nth-of-type(2)::after {
+  inset: 45% auto auto calc(100% - (9.3rem / 3));
+}
+
+.contentFormation > .blockInfos:last-of-type {
+  transform: translateY(6rem);
+}
+
+
+.contentFormation > .blockInfos > .icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+.blockInfos > .icon > svg{
+  width: 2.6rem;
+  height: 2rem;
+  color: var(--bg-primary);
+  background-color: var(--text-primary);
 }

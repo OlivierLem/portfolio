@@ -2,22 +2,31 @@
 modifier variable projet en data et ajouter une variable pour le style %>
 
 <div class="blockInfos">
-  <% if(project) { %>
-  <img
-    src="images/<%- project.image %>"
-    alt=""
-    style="--color: <%=project.color %>"
+  <% if(data) { %> <% if(data.image) { %>
+    <img
+      src="images/<%- data.image %>"
+      alt=""
+      style="--color: <%=data.color %>"
   />
+  <% } %>
+  <% if(data.isCertificate === "true") { %>
+    <span class="icon">
+      <%# modifier l'icône pour pouvoir avoir un background dans l'icone%>
+      <%- include('../../../public/svg/icone diplome.svg') %>
+    </span>
+  <% } %> 
   <div>
-    <h5 class="heading3"><%- project.title %></h5>
-    <p class="heading4"><%- project.date %></p>
-    <p class="text"><%- project.description %></p>
+    <h5 class="heading3"><%- data.title %></h5>
+    <p class="heading4"><%- data.date %></p>
+    <p class="text"><%- data.description %></p>
     <div class="tagsList">
-      <% for (const tags of project.tags) { %>
+      <%# condition si il y'a plus de 3 lignes %> 
+      <% for (const tags of data.tags) { %>
       <p class="text"><%= tags %></p>
       <% } %>
     </div>
   </div>
+  <% if(data.image) { %>
   <button class="button">Plus d'infos</button>
-  <% } %>
+  <% } %> <% } %>
 </div>

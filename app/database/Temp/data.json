@@ -1,5 +1,5 @@
 {
-  "project": [
+  "projects": [
     {
       "title": "Timeline App",
       "image":"projet-timeline.jpg",
@@ -26,7 +26,7 @@
       ]
     }
   ],
-  "experience": [
+  "experiences": [
     {
       "title": "Stage - développement d’application web (Angular)",
       "image": "experience-firepark.jpg",
@@ -42,6 +42,91 @@
         "UI Design",
         "GitHub",
         "Trello"
+      ]
+    },
+    {
+      "title": "Titre",
+      "image": "experience-firepark.jpg",
+      "color": "#fff",
+      "date": "Date",
+      "description": "Description",
+      "tags": [
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags"
+      ]
+    },
+    {
+      "title": "Titre",
+      "image": "experience-firepark.jpg",
+      "color": "#fff",
+      "date": "Date",
+      "description": "Description",
+      "tags": [
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags"
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "title": "Formation Concepteur développeur d’application",
+      "date": "1er Mars - 4 Octobre 2023",
+      "description": "Formation en Développement d’application dans le centre de formation SOFIP, principalement dans la création d’appli web avec du developpement back-end mais aussi un projet d’appli mobile ",
+      "isCertificate": "true",
+      "tags":[
+        "CSS",
+        "Javascript",
+        "React",
+        "Figma",
+        "Express",
+        "MySQL",
+        "MongoDB",
+        "Firebase",
+        "Expo"
+      ]
+    },
+    {
+      "title": "Titre",
+      "date": "Date",
+      "description": "Description",
+      "isCertificate": "false",
+      "tags": [
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags"
+      ]
+    },
+    {
+      "title": "Titre",
+      "date": "Date",
+      "description": "Description",
+      "isCertificate": "true",
+      "tags": [
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags",
+        "Tags"
       ]
     }
   ]

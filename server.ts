@@ -11,13 +11,14 @@ app.set("views", "./app/views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-const { project, experience } = JSON.parse(
+const { projects, experiences, formations } = JSON.parse(
   readFileSync("app/database/Temp/data.json", "utf-8")
 );
 app.get("/", (req: Request, res: Response) => {
   res.render(`./pages/homepage`, {
-    listProject: project,
-    listExperience: experience,
+    listProject: projects,
+    listExperience: experiences,
+    listFormation: formations,
   });
 });
 

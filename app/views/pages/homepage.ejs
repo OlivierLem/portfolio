@@ -53,9 +53,19 @@
     </section>
     <section class="experienceSection" id="experienceSection">
       <h3 class="bigTitle">Expérience pro</h3>
-      <%# for (const project of listProject) { %> <%-
-      include('../layouts/blockInfos.ejs', {project: listExperience[0]}) %> <%#
-      } %>
+      <div class="sliderExperience">
+        <% for (const experience of listExperience) { %> 
+          <%-include('../layouts/blockInfos.ejs', {data: experience}) %> 
+        <% } %>
+      </div>
+    </section>
+    <section class="formationSection" id="formationSection">
+      <h3 class="bigTitle">Formation</h3>
+      <div class="contentFormation">
+        <% for (const formation of listFormation) { %> 
+          <%-include('../layouts/blockInfos.ejs', {data: formation}) %> 
+        <% } %>
+      </div>
     </section>
   </body>
 </html>
