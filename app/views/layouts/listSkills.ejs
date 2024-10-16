@@ -1,0 +1,15 @@
+<div class="listSkills">
+  <% if(skills) { %>
+    <p class="heading3"><%=skills.type%></p>
+    <span class="lineSkill"></span>
+    <div class="listSkills-element">
+      <% for (const s of skills.list) { %>
+        <p>
+          <%# Modifier la base de données pour l'ajout des icone skills %>
+          <span class="icon"><%- include('../../../public/svg/logo scss.svg') %></span>
+          <%= s%>
+        </p>
+      <% } %>
+    </div>
+  <% } %>
+</div>  

@@ -129,5 +129,35 @@
         "Tags"
       ]
     }
+  ],
+  "skills": [
+    {
+      "type":"Front-end",
+      "list": [
+        "SCSS",
+        "Tailwind",
+        "Typescript",
+        "React",
+        "Jest",
+        "Cypress"
+      ]
+    },
+    {
+      "type":"Back-end",
+      "list": [
+        "Express",
+        "MySQL",
+        "MongoDb",
+        "Firebase"
+      ]
+    },
+    {
+      "type":"Outils",
+      "list": [
+        "Figma",
+        "Github",
+        "Photoshop"
+      ]
+    }
   ]
 }

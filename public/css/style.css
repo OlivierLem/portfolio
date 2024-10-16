@@ -69,7 +69,7 @@ body {
   line-height: 1.6rem;
 }
 
-.icon>svg {
+.icon > svg {
   color: var(--text-secondary);
 }
 
@@ -137,7 +137,10 @@ section {
   width: fit-content;
   top: 3rem;
   right: 5rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background-color: rgba(33, 37, 40, 0.8);
+  border-radius: 5rem;
 }
 
 .navBar a {
@@ -479,4 +482,112 @@ section {
   height: 2rem;
   color: var(--bg-primary);
   background-color: var(--text-primary);
+}
+
+/* skillsSection */
+
+.skillSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 7.3rem;
+  padding: 2rem 0;
+}
+
+.skillSection > .bigTitle {
+  display: inline-flex;
+  text-transform: capitalize;
+  position: relative;
+  width: 32%;
+  height: fit-content;
+}
+
+.skillSection > .bigTitle::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 60%;
+  height: .4rem;
+  border-radius: 5rem;
+  background-color: var(--text-secondary);
+}
+
+.groupSkills {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: var(--text-contrast);
+}
+
+.groupSkills > .listSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+  width: 18rem;
+  height: fit-content;
+  padding: 2.5rem 2rem;
+  border: solid 3px var(--border-gray) ;
+  border-radius: 1.5rem;
+  background-color: var(--bg-secondary);
+}
+
+.groupSkills > .listSkills > .heading3 {
+  text-align: center;
+}
+
+.groupSkills > .listSkills > .lineSkill{
+  display: block;
+  width: 100%;
+  height: fit-content;
+  border-bottom: dotted .5rem var(--text-primary) ;
+  transform: scaleX(1.7);
+  clip-path: inset(0 20% 0 20%);
+}
+
+.listSkills-element {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.listSkills-element > p {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  width: fit-content;
+  padding: .6rem .8rem;
+  border-radius: 5rem;
+  background-color: var(--bg-primary);
+}
+
+.listSkills-element > p > .icon > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* contactSection */
+
+.contactSection {
+  display: flex;
+  height: 29rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactSection > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactSection > div > .button {
+  width: fit-content;
+}
+
+.contactSection > div:first-of-type .icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
